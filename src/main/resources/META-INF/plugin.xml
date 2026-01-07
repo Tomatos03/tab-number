@@ -6,10 +6,12 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.tomatos03.tabnumber.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.tomatos03.tabnumber.startup.MyProjectActivity" />
+        <editorTabTitleProvider implementation="com.github.tomatos03.tabNumber.provider.TabNumberEditorTabTitleProvider" />
+        <postStartupActivity implementation="com.github.tomatos03.tabNumber.startup.TabNumberProjectActivity"/>
     </extensions>
+
+    <description>
+        插件描述
+    </description>
 </idea-plugin>
